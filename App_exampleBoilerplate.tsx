@@ -24,7 +24,6 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-import EventList from './components/EventList';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -63,25 +62,6 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const dummyEvents = [
-    {
-      event_name: 'Event 1',
-      time: '10:00 AM',
-      address: '123 Main St, Cityville',
-    },
-    {
-      event_name: 'Event 2',
-      time: '02:30 PM',
-      address: '456 Oak St, Townsville',
-    },
-    {
-      event_name: 'Event 3',
-      time: '07:00 PM',
-      address: '789 Pine St, Villageland',
-    },
-  ];
-
-
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -96,7 +76,6 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-            <EventList events={dummyEvents} />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
